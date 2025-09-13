@@ -16,9 +16,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(26, 26, 46, 0.95)';
+        navbar.style.background = 'rgba(255, 255, 255, 0.01)';
     } else {
-        navbar.style.background = 'rgba(26, 26, 46, 0.9)';
+        navbar.style.background = 'transparent';
     }
 });
 
@@ -46,4 +46,25 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
+const cursor = document.querySelector('.cursor-circle');
+
+// Seguimiento del mouse
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+});
+
+// Efecto hover en elementos interactivos
+document.querySelectorAll('.cursor-effect').forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        cursor.style.width = '3rem';
+        cursor.style.height = '3rem';
+    });
+    
+    element.addEventListener('mouseleave', () => {
+        cursor.style.width = '1.5rem';
+        cursor.style.height = '1.5rem';
+    });
+
+});
 

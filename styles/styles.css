@@ -1,4 +1,12 @@
 /* Reset and Base Styles */
+:root{
+    --back: #33313B;
+    --details: #3C4F65;
+    --hint: #8b5270;
+    --hint-glass: #834c6960;
+    --text: #E6F5FF;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,15 +15,15 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    color: white;
+    background-color: var(--back);
+    color: var(--text);
     overflow-x: hidden;
 }
 
 /* Navigation */
 .navbar {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
+    background: transparent;
+    backdrop-filter: blur(10px);
     padding: 1rem 0;
     transition: all 0.3s ease;
 }
@@ -215,4 +223,26 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #0099cc;
+}
+
+.cursor-circle {
+    position: fixed;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--hint-glass);
+    border: 2px solid var(--hint);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: 
+        transform 0.3s ease,
+        width 0.3s ease,
+        height 0.3s ease;
+    z-index: 9999;
+    mix-blend-mode: difference;
+}
+
+
+.cursor-effect {
+    cursor: pointer !important;
 }
