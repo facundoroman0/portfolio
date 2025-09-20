@@ -59,9 +59,9 @@ h6,
 /* Theme Toggle */
 .theme-toggle {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
     background: var(--accent-primary);
     border: none;
     width: 50px;
@@ -553,4 +553,60 @@ h6,
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Agregar estos estilos al final del archivo styles.css */
+
+/* Ajustes específicos para el hero en móviles */
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        padding-top: 80px;
+        min-height: auto;
+    }
+    
+    .hero .col-lg-6.text-center {
+        order: -1; /* Coloca el ícono arriba del texto en móviles */
+        margin-bottom: 2rem;
+    }
+    
+    .hero .col-lg-6.text-center div {
+        font-size: 8rem !important; /* Reduce significativamente el tamaño del ícono */
+        opacity: 0.15;
+        margin-bottom: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero .description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .btn-custom, 
+    .btn-outline-custom {
+        display: block;
+        margin: 0.5rem auto;
+        width: 80%;
+        max-width: 250px;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 576px) {
+    .hero .col-lg-6.text-center div {
+        font-size: 6rem !important;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
 }

@@ -21,13 +21,20 @@
 </head>
 
 <body>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#inicio">Mi Portfolio</a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -42,30 +49,32 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contacto">Contacto</a>
                     </li>
-                    <li>
-                        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </li>
                 </ul>
             </div>
+
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Reemplazar la sección hero existente con esta versión mejorada -->
     <section id="inicio" class="hero">
         <div class="container">
             <div class="row align-items-center">
+                <!-- Este div se mostrará primero en móviles (order modificado via CSS) -->
+                <div class="col-lg-6 text-center d-none d-lg-block">
+                    <div style="font-size: 20rem; color: var(--accent-primary); opacity: 0.1;">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
                 <div class="col-lg-6">
                     <div class="hero-content">
-                        <h1>Hola, soy <span style="color: var(--teal);">Tu Nombre</span></h1>
+                        <h1>Hola, soy <span style="color: var(--accent-secondary);">Tu Nombre</span></h1>
                         <p class="subtitle">Desarrollador Web Full Stack</p>
                         <p class="description">
                             Apasionado por crear experiencias web increíbles con tecnologías modernas.
                             Especializado en desarrollo frontend y backend, con enfoque en UX/UI y
                             optimización de rendimiento.
                         </p>
-                        <div>
+                        <div class="hero-buttons">
                             <a href="#contacto" class="btn-custom">
                                 <i class="fas fa-envelope me-2"></i>Contáctame
                             </a>
@@ -75,10 +84,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <div style="font-size: 20rem; color: var(--accent-primary); opacity: 0.1;">
-                        <i class="fas fa-code"></i>
-                    </div>
+                <!-- Este ícono solo se mostrará en móviles -->
+                <div class="col-12 text-center d-lg-none mobile-code-icon">
+                    <i class="fas fa-code" style="font-size: 6rem; color: var(--accent-primary); opacity: 0.15;"></i>
                 </div>
             </div>
         </div>
