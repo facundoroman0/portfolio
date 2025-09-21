@@ -4,7 +4,6 @@
     --lavender: #CBC5EA;
     --bronze: #BE7C4D;
 
-    /* Light theme (default) */
     --bg-primary: #FFFFFF;
     --bg-secondary: var(--light-gray);
     --text-primary: var(--dark-gray);
@@ -80,6 +79,13 @@ h6,
 .theme-toggle:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 25px rgba(203, 197, 234, 0.4);
+}
+
+
+.code-logo-bg{
+    font-size: 20rem; 
+    color: var(--text-primary); 
+    opacity: 0.1;
 }
 
 /* Navigation */
@@ -194,7 +200,28 @@ h6,
     animation: fadeInUp 1s ease-out 0.4s both;
 }
 
+/* Estilos para el botón en tema light (usando solo variables existentes) */
 .btn-custom {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: var(--text-primary);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.btn-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(203, 197, 234, 0.4);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-custom {
     background: linear-gradient(135deg, var(--blue-gray), var(--warm-gray));
     color: white;
     border: none;
@@ -208,7 +235,7 @@ h6,
     animation: fadeInUp 1s ease-out 0.6s both;
 }
 
-.btn-custom:hover {
+[data-theme="dark"] .btn-custom:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(152, 161, 188, 0.3);
     color: white;
@@ -555,9 +582,6 @@ h6,
     transform: translateY(0);
 }
 
-/* Agregar estos estilos al final del archivo styles.css */
-
-/* Ajustes específicos para el hero en móviles */
 @media (max-width: 768px) {
     .hero {
         text-align: center;
@@ -566,12 +590,12 @@ h6,
     }
     
     .hero .col-lg-6.text-center {
-        order: -1; /* Coloca el ícono arriba del texto en móviles */
+        order: -1; 
         margin-bottom: 2rem;
     }
     
     .hero .col-lg-6.text-center div {
-        font-size: 8rem !important; /* Reduce significativamente el tamaño del ícono */
+        font-size: 8rem !important; 
         opacity: 0.15;
         margin-bottom: 1rem;
     }
@@ -609,4 +633,51 @@ h6,
     .hero h1 {
         font-size: 1.8rem;
     }
+}
+[data-theme="dark"] .cursor-dot{
+    background-color: var(--accent-primary);
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--dark-gray);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity 0.3s;
+}
+
+[data-theme="dark"] .cursor-circle{
+    border: 1px solid var(--accent-primary);
+}
+.cursor-circle {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--dark-gray);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transition: all 0.1s ease-out;
+}
+
+/* Efectos al hacer hover en elementos interactivos */
+a, button, .btn-custom, .project-card, .skill-card, .theme-toggle {
+    cursor: none !important;
+}
+
+a:hover ~ .cursor-circle,
+button:hover ~ .cursor-circle,
+.btn-custom:hover ~ .cursor-circle,
+.project-card:hover ~ .cursor-circle,
+.skill-card:hover ~ .cursor-circle,
+.theme-toggle:hover ~ .cursor-circle {
+    transform: scale(1.5);
+    background-color: rgba(203, 197, 234, 0.1);
 }

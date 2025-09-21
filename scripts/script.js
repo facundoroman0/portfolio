@@ -20,9 +20,9 @@ themeToggle.addEventListener('click', function () {
 
 function updateThemeIcon(theme) {
     if (theme === 'dark') {
-        themeIcon.className = 'fas fa-sun';
+        themeIcon.className = 'bi bi-brightness-high';
     } else {
-        themeIcon.className = 'fas fa-moon';
+        themeIcon.className = 'bi bi-moon';
     }
 }
 
@@ -119,3 +119,4 @@ window.addEventListener('scroll', function () {
 window.addEventListener('load', function () {
     document.body.classList.add('loaded');
 });
+
