@@ -84,11 +84,8 @@ document.querySelectorAll('.fade-in').forEach(el => {
 document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Simple form validation and success message
     const formData = new FormData(this);
 
-    // Here you would typically send the data to your server
-    // For now, just show a success message
     alert('¡Gracias por tu mensaje! Te responderé pronto.');
     this.reset();
 });

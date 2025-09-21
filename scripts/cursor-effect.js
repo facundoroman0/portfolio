@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     interactiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
-            scale = 1.5;
+            scale = 1.3;
             cursorCircle.style.backgroundColor = 'rgba(203, 197, 234, 0.1)';
         });
 
@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Animación suave con requestAnimationFrame
     function animateCursor() {
         // Movimiento instantáneo para el punto
-        cursorDot.style.left = `${mouseX - 4}px`;
-        cursorDot.style.top = `${mouseY - 4}px`;
+        cursorDot.style.left = `${mouseX - 2}px`;
+        cursorDot.style.top = `${mouseY - 2}px`;
 
         // Movimiento con retraso para el círculo
         circleX += (mouseX - circleX - 15) * 0.2;  // 30/2=15
