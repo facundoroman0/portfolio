@@ -60,6 +60,21 @@ h6,
     color: var(--dark-gray);
 }
 
+/* Estilos para el logo SVG */
+.logo-svg {
+    transition: all 0.3s ease;
+}
+
+.logo-path {
+    fill: var(--text-primary);
+    transition: fill 0.3s ease;
+}
+
+/* Efecto hover para el logo */
+.navbar-brand:hover .logo-path {
+    fill: var(--accent-primary);
+}
+
 /* Theme Toggle */
 .theme-toggle {
     position: fixed;
