@@ -1,4 +1,3 @@
-// Animación del cursor personalizado
 document.addEventListener('DOMContentLoaded', function () {
     const cursorDot = document.createElement('div');
     const cursorCircle = document.createElement('div');
@@ -12,14 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
     let mouseX = 0, mouseY = 0;
     let circleX = 0, circleY = 0;
     let scale = 1;
-
-    // Seguir la posición del mouse
     document.addEventListener('mousemove', function (e) {
         mouseX = e.clientX;
         mouseY = e.clientY;
     });
 
-    // Efecto al hacer hover en elementos interactivos
     const interactiveElements = document.querySelectorAll('a, button, .btn-custom, .project-card, .skill-card, .theme-toggle');
 
     interactiveElements.forEach(el => {
@@ -34,14 +30,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Animación suave con requestAnimationFrame
     function animateCursor() {
-        // Movimiento instantáneo para el punto
         cursorDot.style.left = `${mouseX - 2}px`;
         cursorDot.style.top = `${mouseY - 2}px`;
-
-        // Movimiento con retraso para el círculo
-        circleX += (mouseX - circleX - 15) * 0.2;  // 30/2=15
+        circleX += (mouseX - circleX - 15) * 0.2;  
         circleY += (mouseY - circleY - 15) * 0.2;
 
         cursorCircle.style.left = `${circleX}px`;
@@ -52,8 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     animateCursor();
-
-    // Ocultar cursor al salir de la ventana
     document.addEventListener('mouseleave', () => {
         cursorDot.style.opacity = '0';
         cursorCircle.style.opacity = '0';

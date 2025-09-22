@@ -1,12 +1,8 @@
-// Theme Toggle Functionality
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon = themeToggle.querySelector('i');
-
-// Check for saved theme preference or default to light mode
 const currentTheme = localStorage.getItem('theme') || 'light';
 document.documentElement.setAttribute('data-theme', currentTheme);
 
-// Update icon based on current theme
 updateThemeIcon(currentTheme);
 
 themeToggle.addEventListener('click', function () {
@@ -26,7 +22,6 @@ function updateThemeIcon(theme) {
     }
 }
 
-// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -40,7 +35,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Active navigation link
 window.addEventListener('scroll', function () {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -62,7 +56,6 @@ window.addEventListener('scroll', function () {
     });
 });
 
-// Scroll animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -80,7 +73,6 @@ document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
 });
 
-// Form submission
 document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -90,7 +82,6 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     this.reset();
 });
 
-// Navbar background on scroll
 window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar');
     const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -112,7 +103,6 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Add loading animation
 window.addEventListener('load', function () {
     document.body.classList.add('loaded');
 });

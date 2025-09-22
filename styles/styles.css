@@ -3,7 +3,6 @@
     --light-gray: #EAEAEA;
     --lavender: #CBC5EA;
     --bronze: #BE7C4D;
-
     --bg-primary: #FFFFFF;
     --bg-secondary: var(--light-gray);
     --text-primary: var(--dark-gray);
@@ -41,17 +40,7 @@ body {
 }
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.hero h1,
-.section-title,
-.skill-title,
-.project-title,
-.navbar-brand {
+.hero h1, .section-title, .skill-title, .project-title, .navbar-brand {
     font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -60,7 +49,6 @@ h6,
     color: var(--dark-gray);
 }
 
-/* Estilos para el logo SVG */
 .logo-svg {
     transition: all 0.3s ease;
 }
@@ -70,12 +58,11 @@ h6,
     transition: fill 0.3s ease;
 }
 
-/* Efecto hover para el logo */
+
 .navbar-brand:hover .logo-path {
     fill: var(--accent-primary);
 }
 
-/* Theme Toggle */
 .theme-toggle {
     position: fixed;
     bottom: 15px;
@@ -125,7 +112,6 @@ h6,
     pointer-events: none;
 }
 
-/* Navigation */
 .navbar {
     background-color: rgba(234, 234, 234, 0.1);
     backdrop-filter: blur(15px);
@@ -145,20 +131,24 @@ h6,
     font-size: 1.5rem;
 }
 
-.nav-link {
+.nav-link-custom {
     color: var(--text-primary);
     font-weight: 500;
     margin: 0 0.5rem;
     transition: all 0.3s ease;
     position: relative;
+    text-decoration: none;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link-custom:hover {
     color: var(--accent-primary);
 }
 
-.nav-link::after {
+[data-theme="dark"] .nav-link-custom:hover{
+    color: var(--accent-primary);
+}
+
+.nav-link-custom::after {
     content: '';
     position: absolute;
     width: 0;
@@ -168,14 +158,14 @@ h6,
     background-color: var(--accent-primary);
     transition: all 0.3s ease;
     transform: translateX(-50%);
+    
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
+.nav-link-custom:hover::after,
+.nav-link-custom.active::after {
     width: 100%;
 }
 
-/* Hero Section */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -196,8 +186,6 @@ h6,
     background: radial-gradient(circle, rgba(152, 161, 188, 0.1) 0%, transparent 70%);
     animation: float 6s ease-in-out infinite;
 }
-
-
 
 @keyframes float {
 
@@ -240,7 +228,6 @@ h6,
     animation: fadeInUp 1s ease-out 0.4s both;
 }
 
-/* Estilos para el botón en tema light (usando solo variables existentes) */
 .btn-custom {
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
     color: var(--text-primary);
@@ -263,8 +250,8 @@ h6,
 
 [data-theme="dark"] .btn-custom {
     background: linear-gradient(135deg, var(--blue-gray), var(--warm-gray));
-    color: white;
-    border: none;
+    color: var(--accent-primary);
+    border: 1px solid var(--accent-primary);
     padding: 12px 30px;
     border-radius: 50px;
     font-weight: 600;
@@ -312,7 +299,6 @@ h6,
     }
 }
 
-/* Section Styles */
 .section {
     padding: 100px 0;
 }
@@ -338,54 +324,6 @@ h6,
     border-radius: 2px;
 }
 
-/* Skills Section */
-/* .skills {
-    background-color: var(--bg-secondary);
-}
-
-.skill-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    padding: 2rem;
-    height: 100%;
-    transition: transform 0.3s ease;
-    box-shadow: 0 5px 20px rgba(68, 69, 69, 0.1);
-}
-
-[data-theme="dark"] .skill-card {
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-.skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(68, 69, 69, 0.15);
-    border-color: var(--accent-primary);
-}
-
-[data-theme="dark"] .skill-card:hover {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-}
-
-.skill-icon {
-    font-size: 3rem;
-    color: var(--accent-primary);
-    margin-bottom: 1.5rem;
-}
-
-.skill-title {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-}
-
-.skill-description {
-    color: var(--text-secondary);
-    line-height: 1.6;
-} */
-
-/* About Section */
 [data-theme="dark"] .about {
     background-color: var(--bg-secondary);
     color: var(--light-gray);
@@ -410,7 +348,6 @@ h6,
     margin-bottom: 2rem;
 }
 
-/* Image Styles */
 .about-image-container {
     text-align: center;
     position: relative;
@@ -462,7 +399,6 @@ h6,
     }
 }
 
-/* Highlights */
 .about-highlights {
     margin: 2rem 0;
 }
@@ -509,7 +445,6 @@ h6,
     font-size: 0.95rem;
 }
 
-/* Stats */
 .about-stats {
     display: flex;
     justify-content: space-around;
@@ -540,7 +475,6 @@ h6,
     font-weight: 500;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .about-image-container {
         margin-bottom: 2rem;
@@ -590,7 +524,6 @@ h6,
     }
 }
 
-/* Technologies Section - Versión Compacta */
 .technologies-section {
     margin: 1.5rem 0;
 }
@@ -661,7 +594,6 @@ h6,
     transition: all 0.3s ease;
 }
 
-/* Colores específicos al hacer hover */
 .tech-icon-round:hover .fa-html5 {
     color: #E34F26;
 }
@@ -694,8 +626,6 @@ h6,
     color: #F24E1E;
 }
 
-
-/* Responsive */
 @media (max-width: 768px) {
     .tech-categories-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -732,7 +662,6 @@ h6,
     }
 }
 
-/* Projects Section */
 .projects {
     background: var(--bg-primary);
 }
@@ -832,7 +761,6 @@ h6,
     transform: translateY(-2px);
 }
 
-/* Contact Section */
 .contact {
     background-color: var(--bg-secondary);
     color: var(--text-primary);
@@ -910,7 +838,7 @@ h6,
     line-height: 50px;
     text-align: center;
     background: var(--accent-primary);
-    color: white;
+    color: var(--dark-gray);
     border-radius: 50%;
     margin-right: 1rem;
     transition: all 0.3s ease;
@@ -919,24 +847,16 @@ h6,
 
 .social-link:hover {
     background: var(--accent-secondary);
-    color: white;
+    color: var(--accent-primary);
     transform: translateY(-5px);
 }
 
-/* Footer */
 .footer {
     background-color: var(--dark-gray);
     color: var(--light-gray);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-    /* .theme-toggle {
-        top: 15px;
-        right: 15px;
-        width: 45px;
-        height: 45px;
-    } */
 
     .mobile-code-bg {
         font-size: 12rem;
@@ -967,7 +887,6 @@ h6,
     }
 }
 
-/* Scroll animations */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -1021,7 +940,7 @@ h6,
     }
 }
 
-/* Ajustes adicionales para pantallas muy pequeñas */
+
 @media (max-width: 576px) {
     .hero .col-lg-6.text-center div {
         font-size: 6rem !important;
@@ -1066,7 +985,6 @@ h6,
     transition: all 0.1s ease-out;
 }
 
-/* Efectos al hacer hover en elementos interactivos */
 a,
 button,
 .btn-custom,
