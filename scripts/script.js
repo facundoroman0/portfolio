@@ -74,14 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(el);
     });
 
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const formData = new FormData(this);
-
-        alert('¡Gracias por tu mensaje! Te responderé pronto.');
-        this.reset();
-    });
 
     window.addEventListener('scroll', function () {
         const navbar = document.querySelector('.navbar');
