@@ -1009,3 +1009,103 @@ button:hover~.cursor-circle,
     transform: scale(1.5);
     background-color: rgba(203, 197, 234, 0.1);
 }
+
+/* Estilos para validación de formularios */
+.form-control {
+    transition: all 0.3s ease;
+    border: 2px solid #e0e0e0;
+}
+
+.form-control:focus {
+    border-color: #CBC5EA;
+    box-shadow: 0 0 0 0.2rem rgba(203, 197, 234, 0.25);
+}
+
+.form-control.error {
+    border-color: #BE7C4D;
+    box-shadow: 0 0 0 0.2rem rgba(190, 124, 77, 0.25);
+}
+
+.form-control.success {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+}
+
+/* Contenedor de notificaciones */
+.notification-container {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 9999;
+    max-width: 350px;
+}
+
+.notification {
+    background-color: rgba(234, 234, 234, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: var(--text-primary);
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #CBC5EA;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification.error {
+    border: 1px solid #be7c4d;
+    background-color: #be7c4d23;
+}
+
+
+.notification.success {
+    border: 1px solid #4CAF50;
+    background-color: #4caf4f1e;
+    
+}
+
+[data-theme="dark"] .notification, .notification.error, .notification.success{
+    color: var(--text-primary);
+}
+
+.notification-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.notification-message {
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Mejoras de usabilidad para formularios */
+.contact-form .form-control:not(:placeholder-shown) {
+    border-color: #CBC5EA;
+}
+
+/* Estados del botón de envío */
+.btn-custom:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Spinner para el botón de envío */
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

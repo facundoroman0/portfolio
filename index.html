@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <!-- EmailJs -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "5J4dohHLPPyNk-wkO",
+            });
+        })();
+    </script>
+
 </head>
 
 <body>
@@ -112,7 +126,7 @@
                     </div>
                 </div>
 
-               
+
                 <div class="col-lg-8 col-md-7">
                     <div class="about-content fade-in">
                         <p class="about-description">
@@ -122,12 +136,12 @@
                         </p>
                     </div>
 
-                    
+
                     <div class="technologies-section">
                         <h4 class="tech-title">Tecnologías que domino</h4>
 
                         <div class="tech-categories-grid">
-                            
+
                             <div class="tech-category-compact">
                                 <h5 class="category-title-sm">
                                     <i class="bi bi-layout-sidebar-inset-reverse"></i>
@@ -188,7 +202,7 @@
                                 </div>
                             </div>
 
-                            
+
                             <div class="tech-category-compact">
                                 <h5 class="category-title-sm">
                                     <i class="bi bi-tools"></i>
@@ -311,17 +325,22 @@
             <h2 class="section-title fade-in">Contáctame</h2>
             <div class="row">
                 <div class="col-lg-8">
-                    <form class="contact-form fade-in" id="contactForm" novalidate>
+                    <form id="contact-form" class="contact-form fade-in"  novalidate>
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Tu Nombre" required>
+                                <input name="username" type="text" class="form-control" placeholder="Tu Nombre"
+                                    required>
                             </div>
                             <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Tu Email" required>
+                                <input name="email" type="email" class="form-control" placeholder="Tu Email" required>
                             </div>
                         </div>
-                        <input type="text" class="form-control" placeholder="Asunto" required>
-                        <textarea class="form-control" rows="6" placeholder="Tu Mensaje" required></textarea>
+
+                        <input name="subject" type="text" class="form-control" placeholder="Asunto" required>
+
+                        <textarea name="message" class="form-control" rows="6" placeholder="Tu Mensaje"
+                            required></textarea>
+
                         <button type="submit" class="btn-custom">
                             <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
                         </button>
@@ -344,9 +363,11 @@
                             </div>
                         </div>
                         <div class="social-links d-flex mt-2">
-                            <a href="https://www.linkedin.com/in/facundo-romano-008b78335/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/facundoroman0" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
-                            
+                            <a href="https://www.linkedin.com/in/facundo-romano-008b78335/" class="social-link"
+                                target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/facundoroman0" class="social-link" target="_blank"><i
+                                    class="fab fa-github"></i></a>
+
                         </div>
                     </div>
                 </div>
@@ -364,6 +385,7 @@
     <script src="../scripts/cursor-effect.js"></script>
     <script src="../scripts/script.js"></script>
     <script src="../scripts/validations.js"></script>
+    
 </body>
 
 </html>
