@@ -1,27 +1,36 @@
 :root {
+    --dark: #2e2e2e;
     --dark-gray: #444545;
-    --light-gray: #EAEAEA;
+    --light-gray: #aaaaaa;
+    --white: #EAEAEA;
     --lavender: #CBC5EA;
     --bronze: #BE7C4D;
-    --bg-primary: #FFFFFF;
+
+    --bg-primary: var(--white);
     --bg-secondary: var(--light-gray);
+
     --text-primary: var(--dark-gray);
-    --text-secondary: rgba(68, 69, 69, 0.7);
+    --text-secondary: var(--light-gray);
+
     --accent-primary: var(--lavender);
     --accent-secondary: var(--bronze);
-    --card-bg: #FFFFFF;
-    --border-color: rgba(203, 197, 234, 0.2);
+
+    --card-bg: var(--white);
+    --border-color: var(--light-gray);
 }
 
 [data-theme="dark"] {
-    --bg-primary: var(--dark-gray);
-    --bg-secondary: #2A2A2B;
-    --text-primary: var(--light-gray);
-    --text-secondary: rgba(234, 234, 234, 0.7);
+    --bg-primary: var(--dark);
+    --bg-secondary: var(--dark-gray);
+
+    --text-primary: var(--white);
+    --text-secondary: var(--light-gray);
+
     --accent-primary: var(--lavender);
     --accent-secondary: var(--bronze);
-    --card-bg: #3A3A3B;
-    --border-color: rgba(203, 197, 234, 0.1);
+
+    --card-bg: var(--dark-gray);
+    --border-color: var(--dark);
 }
 
 * {
@@ -32,11 +41,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 
@@ -44,13 +50,28 @@ body {
     font-family: 'Space Grotesk', sans-serif;
 }
 
+.theme-toggle {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1001;
+    background: var(--dark-gray);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    color: var(--light-gray);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+
 [data-theme="dark"] .theme-toggle {
     background-color: var(--light-gray);
     color: var(--dark-gray);
-}
-
-.logo-svg {
-    transition: all 0.3s ease;
 }
 
 .logo-path {
@@ -63,30 +84,7 @@ body {
     fill: var(--accent-primary);
 }
 
-.theme-toggle {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    z-index: 1001;
-    background: var(--dark-gray);
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1.2rem;
-    color: var(--light-gray);
-    box-shadow: 0 5px 15px rgba(203, 197, 234, 0.3);
-}
 
-.theme-toggle:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 25px rgba(203, 197, 234, 0.4);
-}
 
 .code-logo-bg {
     font-size: 20rem;
