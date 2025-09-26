@@ -100,4 +100,13 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.add('loaded');
     });
 
+    const toggle = document.getElementById("navbar-toggler");
+    const iconClose = document.getElementById("close");
+    const iconMenu = document.getElementById("menu");
+
+    toggle.addEventListener('click', () => {
+        iconMenu.classList.toggle("d-sm-none");
+        iconClose.classList.toggle("d-sm-none");
+    })
+
 });

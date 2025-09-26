@@ -63,16 +63,18 @@
                 </svg>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <button class="custom-toggler border-0 shadow-none d-block d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" id="navbar-toggler">
+                <i class="bi bi-menu-app" id="menu"></i>
+                <i class="bi bi-x d-none" id="close"></i>
+
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto py-3 gap-4">
-                    <li class="nav-item me-5">
+                <ul class="navbar-nav ms-auto py-4 gap-3 gap-lg-none">
+                    <li class="nav-item me-3">
                         <a class="nav-link-custom" href="#about">Sobre mi</a>
                     </li>
-                    <li class="nav-item me-5">
+                    <li class="nav-item me-3">
                         <a class="nav-link-custom" href="#proyectos">Proyectos</a>
                     </li>
                     <li class="nav-item">

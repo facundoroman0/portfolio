@@ -82,6 +82,20 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
+.custom-toggler i{
+    font-size: 2rem;
+}
+
+.custom-toggler{
+    background: transparent;
+    color: var(--text-primary);
+    transition: color 0.5s ease;
+}
+
+.custom-toggler:hover{
+    color: var(--accent-primary);
+}
+
 .navbar-brand {
     color: var(--text-primary);
 }
