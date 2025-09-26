@@ -105,8 +105,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const iconMenu = document.getElementById("menu");
 
     toggle.addEventListener('click', () => {
-        iconMenu.classList.toggle("d-sm-none");
-        iconClose.classList.toggle("d-sm-none");
+        iconMenu.classList.toggle("d-none");
+        iconClose.classList.toggle("d-none");
     })
 
 });
