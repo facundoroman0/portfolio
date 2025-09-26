@@ -5,6 +5,7 @@
     --white: #EAEAEA;
     --lavender: #CBC5EA;
     --bronze: #BE7C4D;
+    --blur: rgba(234, 234, 234, 0.1);
 
     --bg-primary: var(--white);
     --bg-secondary: var(--light-gray);
@@ -55,13 +56,13 @@ body {
     bottom: 15px;
     right: 15px;
     z-index: 1001;
-    background: var(--dark-gray);
+    background: var(--dark);
     cursor: pointer;
     font-size: 1.2rem;
     padding: 10px 15px;
     border: none;
     border-radius: 50px;
-    color: var(--light-gray);
+    color: var(--dark-gray);
     transition: all 0.3s ease;
 }
 
@@ -74,68 +75,23 @@ body {
     color: var(--dark-gray);
 }
 
-.logo-path {
-    fill: var(--text-primary);
-    transition: fill 0.3s ease;
-}
-
-
-.navbar-brand:hover .logo-path {
-    fill: var(--accent-primary);
-}
-
-
-
-.code-logo-bg {
-    font-size: 20rem;
-    color: var(--text-primary);
-    transition: color 0.5s ease, transform 0.5s ease;
-}
-
-.code-logo-bg:hover {
-    transform: translateY(-10px);
-    color: var(--accent-secondary);
-    text-shadow: 0 0 20px rgba(190, 124, 77, 0.5);
-}
-
-.mobile-code-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 15rem;
-    color: var(--text-primary);
-    opacity: 0.05;
-    z-index: 0;
-    pointer-events: none;
-}
-
 .navbar {
-    background-color: rgba(234, 234, 234, 0.1);
+    background-color: var(--blur);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--border-color);
-    transition: all 0.3s ease;
-    padding: 1rem 0;
-}
-
-[data-theme="dark"] .navbar {
-    background-color: rgba(68, 69, 69, 0.2);
 }
 
 .navbar-brand {
-    font-weight: 700;
     color: var(--text-primary);
-    font-size: 1.5rem;
 }
 
 .nav-link-custom {
     color: var(--text-primary);
     font-weight: 500;
-    margin: 0 0.5rem;
-    transition: all 0.3s ease;
     position: relative;
     text-decoration: none;
+    transition: color 0.3s ease;   
 }
 
 .nav-link-custom:hover {
@@ -154,14 +110,22 @@ body {
     bottom: -5px;
     left: 50%;
     background-color: var(--accent-primary);
-    transition: all 0.3s ease;
     transform: translateX(-50%);
-    
+    transition: width 0.3s ease;
 }
 
 .nav-link-custom:hover::after,
 .nav-link-custom.active::after {
     width: 100%;
+}
+
+.logo-path {
+    fill: var(--text-primary);
+    transition: fill 0.3s ease;
+}
+
+.navbar-brand:hover .logo-path {
+    fill: var(--accent-primary);
 }
 
 .hero {
@@ -296,6 +260,31 @@ body {
         transform: translateY(0);
     }
 }
+
+.code-logo-bg {
+    font-size: 20rem;
+    color: var(--text-primary);
+    transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.code-logo-bg:hover {
+    transform: translateY(-10px);
+    color: var(--accent-secondary);
+    text-shadow: 0 0 20px rgba(190, 124, 77, 0.5);
+}
+
+.mobile-code-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15rem;
+    color: var(--text-primary);
+    opacity: 0.05;
+    z-index: 0;
+    pointer-events: none;
+}
+
 
 .section {
     padding: 100px 0;
