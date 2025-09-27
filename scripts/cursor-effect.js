@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Verificar si es móvil antes de crear los cursores
+    function isMobile() {
+        return window.innerWidth <= 500 || 'ontouchstart' in window || navigator.maxTouchPoints;
+    }
+
+    // Si es móvil, no crear los cursores
+    if (isMobile()) {
+        return;
+    }
+
     const cursorDot = document.createElement('div');
     const cursorCircle = document.createElement('div');
 
@@ -11,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let mouseX = 0, mouseY = 0;
     let circleX = 0, circleY = 0;
     let scale = 1;
+
     document.addEventListener('mousemove', function (e) {
         mouseX = e.clientX;
         mouseY = e.clientY;
@@ -31,6 +42,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function animateCursor() {
+        // Verificar nuevamente por si cambió el tamaño
+        if (isMobile()) {
+            cursorDot.style.display = 'none';
+            cursorCircle.style.display = 'none';
+            return;
+        }
+
         cursorDot.style.left = `${mouseX - 2}px`;
         cursorDot.style.top = `${mouseY - 2}px`;
         circleX += (mouseX - circleX - 15) * 0.2;  
@@ -44,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     animateCursor();
+
     document.addEventListener('mouseleave', () => {
         cursorDot.style.opacity = '0';
         cursorCircle.style.opacity = '0';
@@ -52,5 +71,16 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('mouseenter', () => {
         cursorDot.style.opacity = '1';
         cursorCircle.style.opacity = '1';
+    });
+
+    // También ocultar en resize
+    window.addEventListener('resize', function() {
+        if (isMobile()) {
+            cursorDot.style.display = 'none';
+            cursorCircle.style.display = 'none';
+        } else {
+            cursorDot.style.display = 'block';
+            cursorCircle.style.display = 'block';
+        }
     });
 });
