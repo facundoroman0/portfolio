@@ -109,7 +109,7 @@ body {
 }
 
 .nav-link-custom:hover {
-    color: var(--accent-primary);
+    color: var(--accent-secondary);
 }
 
 [data-theme="dark"] .nav-link-custom:hover{
@@ -123,9 +123,12 @@ body {
     height: 2px;
     bottom: -5px;
     left: 50%;
-    background-color: var(--accent-primary);
+    background-color: var(--accent-secondary);
     transform: translateX(-50%);
     transition: width 0.3s ease;
+}
+[data-theme="dark"] .nav-link-custom::after {
+    background-color: var(--accent-primary);
 }
 
 .nav-link-custom:hover::after,
@@ -139,7 +142,7 @@ body {
 }
 
 .navbar-brand:hover .logo-path {
-    fill: var(--accent-primary);
+    fill: var(--accent-secondary);
 }
 
 .hero {
