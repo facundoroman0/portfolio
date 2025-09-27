@@ -62,7 +62,7 @@ body {
     padding: 10px 15px;
     border: none;
     border-radius: 50px;
-    color: var(--dark-gray);
+    color: var(--light-gray);
     transition: all 0.3s ease;
 }
 

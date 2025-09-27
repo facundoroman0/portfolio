@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Verificar si es móvil antes de crear los cursores
     function isMobile() {
         return window.innerWidth <= 500 || 'ontouchstart' in window || navigator.maxTouchPoints;
     }
 
-    // Si es móvil, no crear los cursores
     if (isMobile()) {
         return;
     }
@@ -42,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function animateCursor() {
-        // Verificar nuevamente por si cambió el tamaño
         if (isMobile()) {
             cursorDot.style.display = 'none';
             cursorCircle.style.display = 'none';
@@ -73,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
         cursorCircle.style.opacity = '1';
     });
 
-    // También ocultar en resize
     window.addEventListener('resize', function() {
         if (isMobile()) {
             cursorDot.style.display = 'none';
