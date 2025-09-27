@@ -1,7 +1,7 @@
 :root {
     --dark: #2e2e2e;
     --dark-gray: #444545;
-    --light-gray: #aaaaaa;
+    --light-gray: #c9c9c9;
     --white: #EAEAEA;
     --lavender: #CBC5EA;
     --bronze: #BE7C4D;
@@ -17,7 +17,7 @@
     --accent-secondary: var(--bronze);
 
     --card-bg: var(--white);
-    --border-color: var(--light-gray);
+    --border-color: rgba(68, 69, 69, 0.1);
 }
 
 [data-theme="dark"] {
@@ -455,18 +455,20 @@ body {
     background: var(--bg-primary);
 }
 
+[data-theme="dark"] .projects {
+    background: var(--bg-primary);
+}
+
 .project-card {
     background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
+    border-color: var(--border-color);
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(68, 69, 69, 0.1);
     transition: all 0.3s ease;
-    height: 100%;
 }
 
 [data-theme="dark"] .project-card {
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 20px var(--bg-primary);
 }
 
 .project-card:hover {
@@ -480,70 +482,48 @@ body {
 }
 
 .project-image {
-    height: 250px;
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--text-primary);
     font-size: 4rem;
     opacity: 0.9;
     overflow: hidden;
 }
 
-.project-content {
+/* .project-content {
     padding: 2rem;
-}
+} */
 
 .project-title {
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 1rem;
 }
 
 .project-description {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.project-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
 }
 
 .tech-tag {
-    background: rgba(203, 197, 234, 0.2);
+    background-color: var(--bg-secondary);
     color: var(--accent-secondary);
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 500;
-    border: 1px solid rgba(203, 197, 234, 0.3);
 }
 
 [data-theme="dark"] .tech-tag {
     background: var(--bg-primary);
-    border-color: var(--bg-secondary);
     color: var(--accent-primary);
-}
-
-.project-links {
-    display: flex;
-    gap: 1rem;
 }
 
 .project-link {
     color: var(--accent-secondary);
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .project-link:hover {
