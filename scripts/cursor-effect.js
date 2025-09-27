@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     function isMobile() {
-        return window.innerWidth <= 500 || 'ontouchstart' in window || navigator.maxTouchPoints;
+        return window.innerWidth <= 1024 || 'ontouchstart' in window || navigator.maxTouchPoints;
     }
 
     if (isMobile()) {
