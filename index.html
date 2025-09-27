@@ -16,7 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    
+
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 
     <!-- EmailJs -->
@@ -63,7 +63,8 @@
                 </svg>
             </a>
 
-            <button class="custom-toggler border-0 shadow-none d-block d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" id="navbar-toggler">
+            <button class="custom-toggler border-0 shadow-none d-block d-lg-none" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav" id="navbar-toggler">
                 <i class="bi bi-menu-app" id="menu"></i>
                 <i class="bi bi-x d-none" id="close"></i>
 
@@ -99,12 +100,13 @@
                         <h1 class="mb-1">Hola, soy <span class="name">Facundo Romano</span></h1>
                         <p class="subtitle mb-2">Desarrollo de Software</p>
 
-                        <p class="description mb-4">Enfoque creativo para resolver problemas complejos con tecnología</p>
+                        <p class="description mb-4">Enfoque creativo para resolver problemas complejos con tecnología
+                        </p>
                         <div class="hero-buttons">
-                            <a href="#contacto" class="btn-custom py-2 px-4 rounded-5 me-3">
+                            <a href="#contacto" class="btn-custom py-3 px-4 rounded-5">
                                 <i class="bi bi-envelope me-2"></i>Contáctame
                             </a>
-                            <a href="#about" class="btn-custom py-2 px-4 rounded-5">
+                            <a href="#about" class="btn-custom py-3 px-4 rounded-5">
                                 <i class="bi bi-person me-2"></i>Conoce más
                             </a>
                         </div>
@@ -120,38 +122,36 @@
     <section id="about" class="section about">
         <div class="container">
             <h2 class="section-title fade-in">Sobre Mí</h2>
-            <div class="row align-items-center">
-                <div class="col-lg-4 col-md-5 mb-4 mb-md-0">
-                    <div class="about-image-container fade-in">
-                        <div class="image-wrapper">
+
+            <div class="row">
+                <!-- Columna de la imagen y descripción -->
+                <div class="col-lg-5 col-md-6 mb-4 mb-lg-0 me-auto">
+                    <div class="about-image-container fade-in text-center">
+                        <div class="image-wrapper mb-4">
                             <img src="../images/me.jpg" alt="Facundo Romano - Desarrollador" class="profile-image">
                             <div class="image-border"></div>
                         </div>
-                    </div>
-                </div>
 
-
-                <div class="col-lg-8 col-md-7">
-                    <div class="about-content fade-in">
                         <p class="about-description">
                             Apasionado por crear experiencias web increíbles con tecnologías modernas.
                             Especializado en desarrollo frontend y backend, con enfoque en UX/UI y
                             optimización de rendimiento.
                         </p>
                     </div>
+                </div>
 
-
-                    <div class="technologies-section">
-                        <h4 class="tech-title">Tecnologías que domino</h4>
+                <!-- Columna de las tecnologías -->
+                <div class="col-md-6">
+                    <div class="technologies-section mt-lg-5">
+                        <h4 class="tech-title text-center mb-5">Tecnologías que domino</h4>
 
                         <div class="tech-categories-grid">
-
-                            <div class="tech-category-compact">
-                                <h5 class="category-title-sm">
+                            <div class="tech-category-compact my-3">
+                                <h5 class="category-title-sm text-center mb-2">
                                     <i class="bi bi-layout-sidebar-inset-reverse"></i>
-                                    Frontend
+                                    <span>Frontend</span>
                                 </h5>
-                                <div class="tech-icons-round">
+                                <div class="tech-icons-round d-flex justify-content-center flex-wrap gap-3">
                                     <div class="tech-icon-round" title="HTML5">
                                         <i class="fab fa-html5"></i>
                                     </div>
@@ -167,17 +167,21 @@
                                 </div>
                             </div>
 
-                            <div class="tech-category-compact">
-                                <h5 class="category-title-sm">
+                            <div class="tech-category-compact my-3">
+                                <h5 class="category-title-sm text-center mb-2">
                                     <i class="bi bi-server"></i>
-                                    Backend
+                                    <span>Backend</span>
                                 </h5>
-                                <div class="tech-icons-round">
+                                <div class="tech-icons-round d-flex justify-content-center flex-wrap gap-3">
                                     <div class="tech-icon-round" title="Python">
                                         <i class="fab fa-python"></i>
                                     </div>
                                     <div class="tech-icon-round" title="Django">
-                                        <i class="fas fa-code"></i>
+                                        <svg class="django-icon" fill="#444545" width="30px" height="30px" viewBox="0 0 24 24" role="img"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.146 0h3.924v18.166c-2.013.382-3.491.535-5.096.535-4.791 0-7.288-2.166-7.288-6.32 0-4.002 2.65-6.6 6.753-6.6.637 0 1.121.05 1.707.203zm0 9.143a3.894 3.894 0 0 0-1.325-.204c-1.988 0-3.134 1.223-3.134 3.365 0 2.09 1.096 3.236 3.109 3.236.433 0 .79-.025 1.35-.102V9.142zM21.314 6.06v9.098c0 3.134-.229 4.638-.917 5.937-.637 1.249-1.478 2.039-3.211 2.905l-3.644-1.733c1.733-.815 2.574-1.53 3.109-2.625.561-1.121.739-2.421.739-5.835V6.059h3.924zM17.39.021h3.924v4.026H17.39z" />
+                                        </svg>
                                     </div>
                                     <div class="tech-icon-round" title="APIs REST">
                                         <i class="fas fa-database"></i>
@@ -185,20 +189,19 @@
                                 </div>
                             </div>
 
-                            <div class="tech-category-compact">
-                                <h5 class="category-title-sm">
+                            <div class="tech-category-compact my-3">
+                                <h5 class="category-title-sm text-center mb-2">
                                     <i class="bi bi-database"></i>
-                                    Databases
+                                    <span>Databases</span>
                                 </h5>
-                                <div class="tech-icons-round">
+                                <div class="tech-icons-round d-flex justify-content-center flex-wrap gap-3">
                                     <div class="tech-icon-round" title="MySQL">
                                         <i class="bi bi-filetype-sql"></i>
                                     </div>
                                     <div class="tech-icon-round" title="MongoDB">
-
                                         <svg class="logo-svg" width="30px" height="30px" viewBox="0 0 15 15" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path class="logo-path"
+                                            <path class="mongo-icon"
                                                 d="M7.49998 0.5L7.86855 0.162138C7.77385 0.0588232 7.64013 0 7.49998 0C7.35982 0 7.2261 0.0588232 7.1314 0.162138L7.49998 0.5ZM7.49998 13.5L7.10682 13.8089C7.20161 13.9296 7.34654 14 7.49998 14C7.65341 14 7.79834 13.9296 7.89313 13.8089L7.49998 13.5ZM4.62287 9.83822L4.22971 10.1471H4.22971L4.62287 9.83822ZM4.86869 3.3705L4.50011 3.03263H4.50011L4.86869 3.3705ZM10.1313 3.37049L10.4998 3.03263L10.1313 3.37049ZM10.3771 9.83823L10.7702 10.1471H10.7702L10.3771 9.83823ZM7.99998 15V0.5H6.99998V15H7.99998ZM7.89313 13.1911L5.01602 9.52931L4.22971 10.1471L7.10682 13.8089L7.89313 13.1911ZM5.23726 3.70836L7.86855 0.837862L7.1314 0.162138L4.50011 3.03263L5.23726 3.70836ZM7.1314 0.837862L9.76268 3.70836L10.4998 3.03263L7.86855 0.162138L7.1314 0.837862ZM9.98392 9.52932L7.10682 13.1911L7.89313 13.8089L10.7702 10.1471L9.98392 9.52932ZM9.76268 3.70836C11.2517 5.33278 11.3454 7.79655 9.98392 9.52932L10.7702 10.1471C12.4342 8.02932 12.3198 5.01803 10.4998 3.03263L9.76268 3.70836ZM5.01602 9.52931C3.65457 7.79655 3.74821 5.33278 5.23726 3.70836L4.50011 3.03263C2.68016 5.01804 2.56571 8.02932 4.22971 10.1471L5.01602 9.52931Z"
                                                 fill="#444545" />
                                         </svg>
@@ -206,13 +209,12 @@
                                 </div>
                             </div>
 
-
-                            <div class="tech-category-compact">
-                                <h5 class="category-title-sm">
+                            <div class="tech-category-compact my-3">
+                                <h5 class="category-title-sm text-center mb-2">
                                     <i class="bi bi-tools"></i>
-                                    Tools
+                                    <span>Tools</span>
                                 </h5>
-                                <div class="tech-icons-round">
+                                <div class="tech-icons-round d-flex justify-content-center flex-wrap gap-3">
                                     <div class="tech-icon-round" title="Git">
                                         <i class="fab fa-git-alt"></i>
                                     </div>
@@ -329,7 +331,7 @@
             <h2 class="section-title fade-in">Contáctame</h2>
             <div class="row">
                 <div class="col-lg-8">
-                    <form id="contact-form" class="contact-form fade-in"  novalidate>
+                    <form id="contact-form" class="contact-form fade-in" novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <input name="username" type="text" class="form-control" placeholder="Tu Nombre"
@@ -389,7 +391,7 @@
     <script src="../scripts/cursor-effect.js"></script>
     <script src="../scripts/script.js"></script>
     <script src="../scripts/validations.js"></script>
-    
+
 </body>
 
 </html>
