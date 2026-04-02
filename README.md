@@ -26,7 +26,7 @@ portfolio/
 └── images/              # Recursos gráficos
 ```
 
-## Sitio Deployado
+## Enlace al Sitio
 
 🔗 [facuroman0.netlify.app](https://facuroman0.netlify.app/)
 
