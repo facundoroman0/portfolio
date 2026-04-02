@@ -775,16 +775,22 @@ body {
     }
 
     .tech-icon-round:hover {
-        transform: scale(1.1);
-        box-shadow: 0 5px 15px rgba(68, 69, 69, 0.2);
+        transform: translateY(-3px);
+        box-shadow: 0 2px 8px rgba(68, 71, 80, 0.3);
     }
 
     [data-theme="dark"] .tech-icon-round:hover {
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 2px 8px rgba(152, 161, 188, 0.3);
     }
 
     .tech-icon-round i {
         transition: color 0.3s ease;
+        color: var(--text-primary);
+    }
+
+    [data-theme="dark"] .tech-icon-round i {
+        transition: color 0.3s ease;
+        color: var(--text-primary);
     }
 
     .tech-icon-round:hover .fa-html5 {
@@ -812,7 +818,7 @@ body {
     }
 
     .tech-icon-round:hover .fa-github {
-        color: #181717;
+        color: var(--text-primary);
     }
 
     .tech-icon-round:hover .fa-figma {
